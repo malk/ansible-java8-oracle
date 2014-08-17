@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Malk’Zameth
+  description: computationaut
+  license: GPLv3
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - saucy
+        - trusty
+  categories:
+    - development
+    - system
+  dependencies: []
