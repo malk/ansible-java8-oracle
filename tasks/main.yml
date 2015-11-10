@@ -1,16 +1,20 @@
 ---
 - name: Install add-apt-repostory
+  sudo: yes
   apt: name=software-properties-common state=latest
 
 - name: Add Oracle Java Repository
+  sudo: yes
   apt_repository: repo='ppa:webupd8team/java'
 
 - name: Accept Java 8 Licence
+  sudo: yes
   shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-8-licence-acceptance | /usr/bin/debconf-set-selections
   args:
     creates: /etc/oracle-java-8-licence-acceptance
 
 - name: Install Oracle Java 8
+  sudo: yes
   apt: name={{item}} state=latest
   with_items:
     - oracle-java8-installer
