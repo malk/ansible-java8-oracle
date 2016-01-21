@@ -1,14 +1,14 @@
 ansible-java8-oracle
 ====================
 
-Ansible role to Install the oracle Java8 webupd8 ppa.
+Ansible role to Install the Oracle Java8 webupd8 ppa.
 
-Should work on ubuntu or mint, I tested it on trusty, Debian has no ppa suport AFAIK.
+Should work on Ubuntu or Mint. Debian has no ppa suport AFAIK.
 
 Licence is auto-accepted (no prompt) and the whole thing is idempotent
 (executing it several times will not do unneeded steps again).
 
-Only usage of 'shell:' was to accept the licence itself (using 'created:' to be idempotent).
+No usage of 'shell:' only ansible commands.
 
 
 Requirements
@@ -33,4 +33,4 @@ Example Playbook
 
 License
 -------
-GPL V3, but that is interesting on frok only, you can use it at will
+GPL V3, but that is interesting on fork only, you can use it at will.
