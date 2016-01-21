@@ -7,11 +7,9 @@
   sudo: yes
   apt_repository: repo='ppa:webupd8team/java'
 
-- name: Accept Java 8 Licence
+- name: Accept Java 8 License
   sudo: yes
-  shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-8-licence-acceptance | /usr/bin/debconf-set-selections
-  args:
-    creates: /etc/oracle-java-8-licence-acceptance
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
 
 - name: Install Oracle Java 8
   sudo: yes
